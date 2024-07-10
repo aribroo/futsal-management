@@ -1,4 +1,3 @@
-// src/app.module.ts
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { MulterModule } from '@nestjs/platform-express';
@@ -15,8 +14,7 @@ import { AssassmentModule } from './assassment/assassment.module';
 import { StatisticModule } from './statistic/statistic.module';
 import { ScheduleModule } from './schedule/schedule.module';
 import { AuthModule } from './auth/auth.module';
-import { UsersModule } from './users/users.module';
-import { User } from './users/user.entity'; // Import the User entity
+import { UserModule } from './users/user.module';
 
 @Module({
   imports: [
@@ -35,7 +33,6 @@ import { User } from './users/user.entity'; // Import the User entity
     TypeOrmModule.forRoot({
       type: 'sqlite',
       database: 'test.db',
-      entities: [User],
       synchronize: true,
     }),
     PlayerModule,
@@ -44,8 +41,8 @@ import { User } from './users/user.entity'; // Import the User entity
     AssassmentModule,
     StatisticModule,
     ScheduleModule,
-    AuthModule,
-    UsersModule,
+    AuthModule, // Tambahkan modul autentikasi
+    UserModule, // Tambahkan modul pengguna
   ],
 })
 export class AppModule {}

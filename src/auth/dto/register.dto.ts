@@ -1,20 +1,32 @@
-// src/auth/dto/register.dto.ts
-import { IsString, IsNotEmpty } from 'class-validator';
+import { IsString } from 'class-validator';
+import { ApiProperty } from '@nestjs/swagger';
 
 export class RegisterDto {
+  @ApiProperty({
+    example: 'user123',
+    description: 'Username for registration',
+  })
   @IsString()
-  @IsNotEmpty()
   username: string;
 
+  @ApiProperty({
+    example: 'password123',
+    description: 'Password for registration',
+  })
   @IsString()
-  @IsNotEmpty()
   password: string;
 
+  @ApiProperty({
+    example: 'John Doe',
+    description: 'Full name of the user',
+  })
   @IsString()
-  @IsNotEmpty()
   fullName: string;
 
+  @ApiProperty({
+    example: 'admin',
+    description: 'Role of the user',
+  })
   @IsString()
-  @IsNotEmpty()
   role: string;
 }

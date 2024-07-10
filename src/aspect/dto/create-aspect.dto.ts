@@ -5,12 +5,11 @@ export class CreateAspectDto {
   @ApiProperty()
   @IsString()
   assessment_aspect: string;
-  @ApiProperty()
-  @IsNumber()
-  percentage: number;
+
   @ApiProperty()
   @IsNumber()
   core_factor: number;
+
   @ApiProperty()
   @IsNumber()
   secondary_factor: number;

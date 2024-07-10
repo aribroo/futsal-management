@@ -1,5 +1,5 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document, HydratedDocument, Schema as schemaObject } from 'mongoose';
+import { Document, HydratedDocument } from 'mongoose';
 
 @Schema({
   collection: 'aspect',
@@ -12,10 +12,10 @@ import { Document, HydratedDocument, Schema as schemaObject } from 'mongoose';
 export class Aspect extends Document {
   @Prop()
   assessment_aspect: string;
-  @Prop()
-  percentage: number;
+
   @Prop()
   core_factor: number;
+
   @Prop()
   secondary_factor: number;
 }
