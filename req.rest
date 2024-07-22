@@ -1,0 +1,1 @@
+GET https://futsal-management-production.up.railway.app:3000/criteria

@@ -29,8 +29,7 @@ async function bootstrap() {
   SwaggerModule.setup('docs', app, document);
 
   await app.listen(
-    configService.get<number>('app.port.api', 3000),
-    configService.get<string>('app.host', 'localhost'),
+    configService.get<number>('app.port.api', 3000)
   );
   const appUrl = await app.getUrl();
   console.log(`\n`);
