@@ -1,30 +1,40 @@
+import { IsString } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
 
 export class CreateEmotionalDto {
-  @ApiProperty()
-  readonly position: string;
+  @ApiProperty({ descriptions: 'Posisi', example: 'Anchor' })
+  @IsString() 
+  position: string;
 
-  @ApiProperty()
-  readonly name: string;
+  @ApiProperty({ descriptions: 'Nama Pemain', example: 'Alfian Adi' })
+  @IsString() 
+  name: string;
 
-  @ApiProperty()
-  readonly assessmentWeek: string;
+  @ApiProperty({ descriptions: 'Minggu Penilaian', example: 'Week 1' })
+  @IsString() 
+  assessmentWeek: string;
 
-  @ApiProperty()
-  readonly disciplineScore: string;
+  @ApiProperty({ descriptions: 'Nilai Disiplin', example: 'Baik' })
+  @IsString() 
+  disciplineScore: string;
 
-  @ApiProperty()
-  readonly motivationScore: string;
+  @ApiProperty({ descriptions: 'Nilai Motivasi', example: 'Baik' })
+  @IsString() 
+  motivationScore: string;
 
-  @ApiProperty()
-  readonly leadershipScore: string;
+  @ApiProperty({ descriptions: 'Nilai', example: 'Baik' })
+  @IsString() 
+  leadershipScore: string;
 
-  @ApiProperty()
-  readonly teamworkScore: string;
+  @ApiProperty({ descriptions: 'Nilai', example: 'Baik' })
+  @IsString() 
+  teamworkScore: string;
 
-  @ApiProperty()
-  readonly emotionalControlScore: string;
+  @ApiProperty({ descriptions: 'Nilai', example: 'Baik' })
+  @IsString() 
+  emotionalControlScore: string;
 
-  @ApiProperty()
-  readonly developmentScore: string;
+  @ApiProperty({ descriptions: 'Nilai', example: 'Baik' })
+  @IsString() 
+  developmentScore: string;
 }
