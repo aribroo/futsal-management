@@ -28,9 +28,7 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('docs', app, document);
 
-  await app.listen(
-    configService.get<number>('app.port.api', 3000)
-  );
+  await app.listen(configService.get<number>('app.port.api', 3000));
   const appUrl = await app.getUrl();
   console.log(`\n`);
   console.log(`APP NAME\t: ${appName}`);
@@ -38,4 +36,5 @@ async function bootstrap() {
   console.log(`RUNNING ON \t: ${appUrl}`);
   console.log(`SWAGGER URL \t: ${appUrl}/docs`);
 }
+
 bootstrap();

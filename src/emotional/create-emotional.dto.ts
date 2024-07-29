@@ -1,12 +1,30 @@
+import { ApiProperty } from '@nestjs/swagger';
+
 export class CreateEmotionalDto {
-    readonly position: string;
-    readonly name: string;
-    readonly assessmentWeek: string;
-    readonly disciplineScore: string;
-    readonly motivationScore: string;
-    readonly leadershipScore: string;
-    readonly teamworkScore: string;
-    readonly emotionalControlScore: string;
-    readonly developmentScore: string;
-  }
-  
+  @ApiProperty()
+  readonly position: string;
+
+  @ApiProperty()
+  readonly name: string;
+
+  @ApiProperty()
+  readonly assessmentWeek: string;
+
+  @ApiProperty()
+  readonly disciplineScore: string;
+
+  @ApiProperty()
+  readonly motivationScore: string;
+
+  @ApiProperty()
+  readonly leadershipScore: string;
+
+  @ApiProperty()
+  readonly teamworkScore: string;
+
+  @ApiProperty()
+  readonly emotionalControlScore: string;
+
+  @ApiProperty()
+  readonly developmentScore: string;
+}
