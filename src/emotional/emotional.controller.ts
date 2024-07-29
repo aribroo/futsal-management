@@ -13,6 +13,7 @@ export class EmotionalController {
   @ApiResponse({ status: 201, description: 'The record has been successfully created.', type: Emotional })
   @Post()
   async create(@Body() createEmotionalDto: CreateEmotionalDto): Promise<Emotional> {
+    console.log(createEmotionalDto)
     return this.emotionalService.create(createEmotionalDto);
   }
 
