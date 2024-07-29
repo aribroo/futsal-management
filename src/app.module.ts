@@ -15,6 +15,7 @@ import { StatisticModule } from './statistic/statistic.module';
 import { ScheduleModule } from './schedule/schedule.module';
 import { AuthModule } from './auth/auth.module';
 import { UserModule } from './users/user.module';
+import { EmotionalModule } from './emotional/emotional.module'; // Tambahkan ini
 
 @Module({
   imports: [
@@ -43,6 +44,7 @@ import { UserModule } from './users/user.module';
     ScheduleModule,
     AuthModule, // Tambahkan modul autentikasi
     UserModule, // Tambahkan modul pengguna
+    EmotionalModule, // Tambahkan EmotionalModule
   ],
 })
 export class AppModule {}
