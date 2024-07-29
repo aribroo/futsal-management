@@ -26,6 +26,6 @@ export class EmotionalService {
   }
 
   async remove(id: string): Promise<Emotional> {
-    return this.emotionalModel.findByIdAndRemove(id).exec();
+    return this.emotionalModel.findByIdAndDelete(id).exec();
   }
 }
