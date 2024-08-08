@@ -4,6 +4,7 @@ import {
   ValidateNested,
   IsEnum,
   IsObject,
+  IsDate,
 } from 'class-validator';
 import { Type } from 'class-transformer';
 import { Position } from '../../enum/position.enum';
@@ -39,4 +40,9 @@ export class AssessmentCreateDto {
   @ValidateNested({ each: true })
   @Type(() => AspectDto)
   aspect: AspectDto[];
+
+  @ApiProperty()
+  @IsDate()
+  @Type(() => Date)
+  date: Date;
 }

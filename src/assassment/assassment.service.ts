@@ -11,6 +11,7 @@ export class AssassmentService {
     @InjectModel(Assessment.name)
     private assessmentModel: Model<Assessment>,
   ) {}
+
   async create(createAssassmentDto: AssessmentCreateDto) {
     return await this.assessmentModel.create(createAssassmentDto);
   }

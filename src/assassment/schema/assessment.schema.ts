@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, HydratedDocument, Schema as schemaObject } from 'mongoose';
-import { Position, TypeCriteria } from '../../enum/position.enum';
+import { Position } from '../../enum/position.enum';
 
 @Schema({
   collection: 'assessment',
@@ -13,12 +13,18 @@ import { Position, TypeCriteria } from '../../enum/position.enum';
 export class Assessment extends Document {
   @Prop()
   posisi: Position;
+
   @Prop()
   player_name: string;
+
   @Prop()
   aspect_name: string;
-  @Prop({ type: [schemaObject.Types.Mixed], required: true })
-  aspect: Record<string, any>[];
+
+  @Prop({ type: [schemaObject.Types.Mixed] })
+  aspect: Array<Record<string, any>>;
+
+  @Prop({ type: Date })
+  date: Date;
 }
 
 export type AssessmentDocument = HydratedDocument<Assessment>;
