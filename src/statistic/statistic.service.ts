@@ -11,6 +11,7 @@ export class StatisticService {
     @InjectModel(Statistic.name)
     private statisticModel: Model<Statistic>,
   ) {}
+
   async create(createStatisticDto: CreateStatisticDto) {
     return await this.statisticModel.create(createStatisticDto);
   }

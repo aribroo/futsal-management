@@ -1,5 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsEnum, IsObject, IsString } from 'class-validator';
+import { IsEnum, IsObject, IsString, IsDate } from 'class-validator';
+import { Type } from 'class-transformer';
 import { Position } from '../../enum/position.enum';
 
 export class CreateStatisticDto {
@@ -26,4 +27,9 @@ export class CreateStatisticDto {
   @ApiProperty()
   @IsObject()
   keeper: Record<string, any>;
+
+  @ApiProperty()
+  @IsDate()
+  @Type(() => Date)
+  date: Date;
 }

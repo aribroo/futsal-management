@@ -28,6 +28,9 @@ export class Statistic extends Document {
 
   @Prop({ type: schemaObject.Types.Mixed })
   keeper: Record<string, any>;
+
+  @Prop({ type: Date })
+  date: Date;
 }
 
 export type StatisticDocument = HydratedDocument<Statistic>;
