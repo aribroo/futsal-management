@@ -26,19 +26,11 @@ export class Emotional extends Document {
 
   @ApiProperty()
   @Prop({ required: true })
-  leadershipScore: string;
-
-  @ApiProperty()
-  @Prop({ required: true })
   teamworkScore: string;
 
   @ApiProperty()
   @Prop({ required: true })
   emotionalControlScore: string;
-
-  @ApiProperty()
-  @Prop({ required: true })
-  developmentScore: string;
 }
 
 export const EmotionalSchema = SchemaFactory.createForClass(Emotional);

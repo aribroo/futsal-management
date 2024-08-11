@@ -24,17 +24,9 @@ export class CreateEmotionalDto {
 
   @ApiProperty({ description: 'Nilai', example: 'Baik' })
   @IsString() 
-  leadershipScore: string;
-
-  @ApiProperty({ description: 'Nilai', example: 'Baik' })
-  @IsString() 
   teamworkScore: string;
 
   @ApiProperty({ description: 'Nilai', example: 'Baik' })
   @IsString() 
   emotionalControlScore: string;
-
-  @ApiProperty({ description: 'Nilai', example: 'Baik' })
-  @IsString() 
-  developmentScore: string;
 }
